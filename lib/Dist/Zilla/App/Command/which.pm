@@ -27,7 +27,7 @@ sub usage_desc { '%c %o <PluginOrBundle>' }
 
 sub execute
 {
-  my ($self, $opt, $arg) = @_;
+  my (undef, undef, $arg) = @_;
   foreach my $plugin (@$arg)
   {
     my $class = $plugin =~ /^\@(.*)$/ 
