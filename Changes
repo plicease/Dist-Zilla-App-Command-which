@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.02      2016-03-06 18:49:48 -0500
   - Fix table columns
 
 0.01      2016-03-06 13:20:22 -0500
