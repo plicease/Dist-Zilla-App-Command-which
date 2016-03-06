@@ -28,13 +28,18 @@ sub usage_desc { '%c %o <PluginOrBundle>' }
 sub execute
 {
   my (undef, undef, $arg) = @_;
+  
+  my @classes;
+  
   foreach my $plugin (@$arg)
   {
     my $class = $plugin =~ /^\@(.*)$/ 
       ? "Dist::Zilla::PluginBundle::$1" 
       : "Dist::Zilla::Plugin::$plugin";
-    system("which_pm", $class);
+    push @classes, $class;
   }
+
+  exec 'which_pm', @classes;
 }
 
 1;

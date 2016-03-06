@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Fix table columns
 
 0.01      2016-03-06 13:20:22 -0500
   - initial version
